@@ -51,12 +51,12 @@
     margin-top: $gutter + 5px;
   }
 
+  ol,
+  ul,
   p {
     @include core-19;
-    margin: 5px 0;
-    @include media(tablet) {
-      margin: $gutter-one-third 0;
-    }
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
   }
 
   h4,
@@ -77,15 +77,12 @@
   ul {
     list-style: decimal;
     list-style-position: outside;
-    @include core-19;
-    margin: 5px 0 5px $gutter-two-thirds;
-    @include media(tablet) {
-      margin: $gutter-one-third 0 $gutter-one-third $gutter-two-thirds;
-    }
+    margin-left: $gutter-two-thirds;
 
     ul,
     ol {
-      margin: 0 0 0 $gutter-two-thirds;
+      margin-top: 0;
+      margin-bottom: 0;
       padding: 0;
     }
 
@@ -103,14 +100,13 @@
 
   &.direction-rtl ol,
   &.direction-rtl ul {
-    margin: 5px $gutter-two-thirds 5px 0;
-    @include media(tablet) {
-      margin: $gutter-one-third $gutter-two-thirds $gutter-one-third 0;
-    }
+    margin-left: 0;
+    margin-right: $gutter-two-thirds;
 
     ul,
     ol {
-      margin: 0 $gutter-two-thirds 0 0;
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -139,6 +135,9 @@
   }
 
   li {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+
     p {
       margin: 0;
       padding: 0;
@@ -151,7 +150,7 @@
     ul+ol,
     ol+p,
     ol+ul {
-      margin-top: $gutter-one-third;
+      margin-top: 0.75em;
     }
   }
 
