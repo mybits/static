@@ -61,8 +61,16 @@
   ul,
   p {
     @include core-19;
-    margin-top: 0.75em;
-    margin-bottom: 0.75em;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    @media (max-width: 640px) {
+      padding-top: 6px;
+      padding-bottom: 4px;
+    }
+    margin: $gutter-one-third/2 0;
+    @include media(tablet) {
+      margin: $gutter-one-third 0;
+    }
   }
 
   h4,
@@ -141,8 +149,8 @@
   }
 
   li {
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
+    // margin-top: 0.25em;
+    // margin-bottom: 0.25em;
 
     p {
       margin: 0;
