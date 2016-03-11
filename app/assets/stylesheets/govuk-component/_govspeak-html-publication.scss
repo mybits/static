@@ -84,4 +84,11 @@
       }
     }
   }
+
+  // TODO: Mobile @media mixin.
+  @media (max-width: 640px) {
+    & &__fixed-anchor {
+      bottom: -$gutter;
+    }
+  }
 }

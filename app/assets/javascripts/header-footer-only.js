@@ -11,3 +11,4 @@
 //= require libs/govuk-component/govspeak-magna-charta.min
 //= require govuk-component/govspeak-convert-html-pub-charts
 //= require govuk-component/option-select
+//= require govuk-component/govuk-fixed-anchor

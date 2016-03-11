@@ -1,0 +1,14 @@
+<%
+  anchorId = "#contents"
+  className = ""
+  icon = "&uarr;"
+  label = "Contents"
+
+  anchorId = local_assigns.fetch(:anchorId) if local_assigns.include?(:anchorId)
+  className = local_assigns.fetch(:className) if local_assigns.include?(:className)
+  icon = local_assigns.fetch(:icon) if local_assigns.include?(:icon)
+  label = local_assigns.fetch(:label) if local_assigns.include?(:label)
+%>
+<div class="js-govuk-fixed-anchor govuk-fixed-anchor govuk-fixed-anchor--unstuck govuk-fixed-anchor--visible <%= className %>">
+  <a class="govuk-fixed-anchor__anchor" href="<%= anchorId %>"><%= raw icon %> <%= label %></a>
+</div>

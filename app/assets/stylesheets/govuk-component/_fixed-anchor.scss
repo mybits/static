@@ -1,0 +1,31 @@
+.govuk-fixed-anchor {
+  @include core-19;
+  @include transition (opacity, .3s, ease);
+  bottom: $gutter-half;
+  z-index: 1;
+
+  &--visible {
+    display: block;
+    opacity: 1;
+  }
+
+  &--hidden {
+    opacity: 0;
+
+    @include ie-lte(8) {
+      display: none;
+    }
+  }
+
+  &--unstuck {
+    position: absolute;
+  }
+
+  &--stuck {
+    position: fixed;
+  }
+
+  @media print {
+    display: none;
+  }
+}
