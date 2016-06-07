@@ -8,11 +8,7 @@
   function GovspeakYoutubeVideoLinks () {
 
     function getProtocol(){
-      var scheme = document.location.protocol;
-      if (scheme == "file:") {
-        scheme = "https:";
-      }
-      return scheme;
+      return document.location.protocol;
     }
 
     function parseYoutubeVideoId(string){
