@@ -35,6 +35,26 @@
         frequency: 50,
         startTime: new Date("July 26, 2016").getTime(),
         endTime: new Date("July 27, 2016 23:59:59").getTime()
+      },
+      {
+        url: 'https://www.surveymonkey.com/s/2MRDLTW',
+        identifier: 'user_satisfaction_survey',
+        template: TEMPLATE,
+        frequency: 10,
+        activeWhen: function() {
+          function breadcrumbMatches() {
+            var text = $('#global-breadcrumb').text() || "";
+            return (/Education and learning/.test(text) || /Schools and education/.test(text));
+          }
+
+          function sectionMatches() {
+            return $('meta[property="govuk:section"]').attr('content') === 'education and learning';
+          }
+
+          return (sectionMatches() || breadcrumbMatches());
+        },
+        startTime: new Date("August 2, 2016").getTime(),
+        endTime: new Date("August 3, 2016 23:59:59").getTime()
       }
     ],
 
